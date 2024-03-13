@@ -1,0 +1,6 @@
+
+
+enum MyRoutes{
+  loginRoute,
+  registroRoute,
+}
