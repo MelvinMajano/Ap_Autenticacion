@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       
-      initialRoute: MyRoutes.registroRoute.name,
+      initialRoute: MyRoutes.loginRoute.name,
       routes: routes ,
       onGenerateRoute: (settings) {
         return MaterialPageRoute(
