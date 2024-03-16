@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'registro_page.dart';
+import 'InicioPage.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -11,6 +12,10 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
+
+  // Simulación de credenciales almacenadas
+  String Email = 'joseph.alcerro@unah.hn';
+  String Password = '20222000391';
 
   @override
   Widget build(BuildContext context) {
@@ -40,13 +45,28 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                // Aqui falta la logica para verificar el inicio de sesion
-
+                // Verifica las credenciales ingresadas
                 String email = _emailController.text;
                 String password = _passwordController.text;
 
-                print('Email: $email');
-                print('Password: $password');
+                if (email == Email && password == Password) {
+                  // Si las credenciales son correctas, navega a la página de inicio
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          InicioPage(), // Reemplaza LoginPage con la página de inicio
+                    ),
+                  );
+                } else {
+                  // Si las credenciales son incorrectas, muestra un mensaje de error
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('Credenciales incorrectas'),
+                      backgroundColor: Colors.red,
+                    ),
+                  );
+                }
               },
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),

@@ -1,6 +1,5 @@
-
-
-enum MyRoutes{
+enum MyRoutes {
   loginRoute,
   registroRoute,
+  InicioPage,
 }
