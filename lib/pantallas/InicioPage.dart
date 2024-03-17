@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
 class InicioPage extends StatelessWidget {
-  InicioPage({Key? key}) : super(key: key);
+  const InicioPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Inicio'),
+        title: const Text('Inicio'),
       ),
-      body: Center(
+      body: const Center(
         child: Text(
-          'Bienvenido a la página de inicio',
+          'joseph.alcerro@unah.hn',
           style: TextStyle(fontSize: 20.0),
         ),
       ),
