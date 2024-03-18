@@ -19,8 +19,8 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        foregroundColor: Color.fromARGB(255, 255, 255, 255),
-        backgroundColor: Color.fromARGB(255, 133, 122, 255),
+        foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: const Color.fromARGB(255, 133, 122, 255),
         title: const Text('Login'),
       ),
       body: SingleChildScrollView(
@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const InicioPage()));
+                            builder: (context) => InicioPage()));
                     return;
                   } else {
                     // Si las credenciales son incorrectas, muestra un mensaje de error
@@ -82,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                 style: ElevatedButton.styleFrom(
                   padding:
                       const EdgeInsets.symmetric(vertical: 15, horizontal: 50),
-                  backgroundColor: Color.fromARGB(255, 133, 122, 255),
+                  backgroundColor: const Color.fromARGB(255, 133, 122, 255),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50),
                   ),
@@ -112,7 +112,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
       ),
-      drawerScrimColor: Color.fromARGB(255, 133, 122, 255),
+      drawerScrimColor: const Color.fromARGB(255, 133, 122, 255),
     );
   }
 }

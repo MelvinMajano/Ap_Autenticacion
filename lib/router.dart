@@ -10,6 +10,6 @@ import 'package:flutter/material.dart';
 final Map<String, Widget Function(BuildContext)> routes ={
  MyRoutes.loginRoute.name: (context) => const LoginPage(),
  MyRoutes.registroRoute.name: (context) =>  RegistroPage(),
- MyRoutes.homepageRoute.name: (context) => const InicioPage(),
+ MyRoutes.homepageRoute.name: (context) =>  InicioPage(),
 };
 
